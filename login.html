@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dang nhap</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function validate() {
+            var username = document.forms[0].txtUsername.value;
+            var password = document.forms[0].txtPassword.value;
+
+            if (username == "") {
+                alert("Bạn chưa nhập username !");
+                return;
+            }
+            if (password == "") {
+                alert("Bạn chưa nhập password !");
+                return;
+            }
+            alert("Xin chúc mừng! Bạn đã nhập đúng rồi.")
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="POST" onsubmit="return validate();">
+        <h1>ĐĂNG NHẬP</h1>
+        <div class="form-group">
+            <div><label> UserName:</label></div>
+            <input type="text" name="txtUsername" class="form-control">
+        </div>
+        <div class="form-group">
+            <div><label> Password:</label></div>
+            <input type="text" name="txtPassword" class="form-control">
+        </div>
+        <div class="form-group">
+            <div>
+                <label>
+                    <input type="checkbox" name="chkRememberMe">
+                    Remember Me
+                </label>
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <input type="submit" value="Login" />
+        </div>
+
+</body>
+</html>

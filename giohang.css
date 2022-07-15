@@ -1,0 +1,23 @@
+body{
+    background-image: url('photo/9.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+form{
+    width: 400px;
+    height: 300px;
+    border: 1px solid red;
+    padding-left: 80px;
+    margin-left: 420px;
+    margin-top: 80px;
+
+    background-color: lightgreen;
+    color: blue;
+}
+h1{
+    color:orangered;
+    text-align: justify;
+}
+input{
+    color: green;
+}

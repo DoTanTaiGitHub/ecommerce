@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>photo</title>
+    <style>
+        body{
+            background-color: greenyellow;
+        }
+    </style>
+    <script>
+        //khai bao mang hinh
+        var mang=[];
+        //khoi gan bien chi so index =1
+        var index =1;
+        function load(){
+            for(var i =1; i<=10;i++)
+            {
+                //cap phat doi tuong hinh cho phan tu thu i cua mang
+                mang[i] = new Image();
+                mang[i].src = "photo/" +i+ ".jpg";
+            }
+        }
+        function first(){
+            //hien hinh thu 0 : index =0
+            index = 1;
+            document.getElementById("hinh"). src = mang[index].src;
+
+        }
+        function last(){
+            //hien thi hinh cuoi cung
+            index = mang.length -1;
+            document.getElementById("hinh").src = mang[index].src;
+
+        }
+        function previous(){
+            //hien thi hinh thu index = index -1
+            if(index > 1)
+            {
+                index = index -1;
+                document.getElementById("hinh").src = mang[index].src;
+            }
+        }
+        function next(){
+            //hien hinh ke tiep index = index +1
+            if(index < mang.length -1)
+            {
+                index = index +1;
+                document.getElementById("hinh").src = mang[index].src;
+            }
+            
+        }
+    </script>
+</head>
+<body onload="load();">
+    <center>
+        <img id="hinh" src="photo/1.jpg" height="300px" width="400px"><br>
+        <button onclick="first();">first</button>
+        <button onclick="previous();">previous</button>
+        <button onclick="next();">next</button>
+        <button onclick="last();">last</button>
+    </center>
+</body>
+</html>

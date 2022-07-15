@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dang ky</title>
+    <link rel="stylesheet" href="register.css">
+    <script>
+        function register() {
+            var hoten=document.forms[0].txtHoten.value;
+            var SoDT = document.forms[0].txtSoDT.value;
+            var diachi = document.forms[0].txtDiachi.value;
+            var matkhau = document.forms[0].txtMK.value;
+            var xacnhanmatkhau = document.forms[0].txtNhaplaiMK.value;
+            var tuoi = document.forms[0].txtTuoi.value;
+            if(hoten==""){
+                alert("Bạn cần phải nhập họ tên");
+                return;
+
+            }
+            if (SoDT == ""){
+                alert("Bạn chưa nhập số điện thoại");
+                return;
+
+            }
+            if (diachi == ""){
+                alert("Bạn chưa nhập địa chỉ");
+                return;
+
+            }
+            if (matkhau == ""){
+                alert("Bạn chưa nhập mật khẩu");
+                return;
+
+            }
+            if(xacnhanmatkhau == ""){
+                alert("Hãy nhập lại mật khẩu để hệ thống kiểm tra nhé.");
+                return;
+            }
+            if(tuoi == ""){
+                alert("Bạn chưa nhập tuổi.");
+            }
+            alert("Bạn đã đăng kí thành công.");
+            alert("Giờ đây bạn hãy đăng nhập vào hệ thống để có những trải nghiệm mới.");
+            alert("Chúc bạn một ngày mua sắm vui vẻ.");
+            
+        }
+        
+    </script>
+    
+</head>
+
+<body>
+
+    <form action="#" method="post" onsubmit="return register();">
+        <h1>ĐĂNG KÝ</h1>
+        <div>
+        <label for="ten">Họ và Tên:</label>
+        <input type="text" name="txtHoten" id="ten"><br>
+        <br>
+    </div>
+        <div>
+        <label for="numberphone">Số điện thoại:</label>
+        <input type="text" name="txtSoDT" id="numberphone"><br>
+        <br>
+    </div>
+        <div>
+        <label for="adress">Địa chỉ:</label>
+        <input type="text" name="txtDiachi" id="adress"><br>
+        <br>
+    </div>
+        <div>
+        <label for="">Mật khẩu:</label>
+        <input type="text" name="txtMK"><br>
+        <br>
+    </div>
+        <div>
+        <label for="">Nhập lại mật khẩu:</label>
+        <input type="text" name="txtNhaplaiMK">
+        <br>
+    </div>
+        <div>
+        <br />Tuổi : <input type="text" name="txtTuoi" value="" />
+    </div>
+        <br>
+        
+        <div>
+        <input type="submit" value="Gửi" >
+    </div>
+    </form>
+</body>
+</html>

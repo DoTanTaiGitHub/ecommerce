@@ -1,0 +1,34 @@
+body{
+    background-color: aqua;
+    width: 500px;
+    height: 500px;
+}
+.container {
+margin: auto;
+}
+.container  button {
+  width: 90px;
+  height: 90px;
+  border: 1ps solid darkolivegreen;
+  font-size: 1.2em;
+}
+tr:last-child{
+  background-color: greenyellow;
+}
+#so1, #so2 , #kq, #pt{
+  color:red; 
+  font-weight: 900;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 20px;
+} 
+caption {
+  color:orangered; font-weight: 900;
+  font-size: 1.5em; letter-spacing: 2px;
+}
+caption span { color:orangered; font-size: 0.9em;
+  letter-spacing: 0.1px;
+}
+button{
+    background-color: yellow;
+}

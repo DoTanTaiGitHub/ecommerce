@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Shop-ps18692-Đỗ Tấn Tài</title>
+        <link rel = "shortcut icon" type = "image / x-icon" href = "images\Shop212-icon.png">     
+        <link rel="stylesheet" href="index.css">
+        <script>
+            //khai bao ham
+            function showClock()
+            {
+                //lay ngay gio he thong
+                var now = new Date();
+                //lay ra gio, phut, giay
+                gio = now.getHours();
+                phut = now.getMinutes();
+                giay = now.getSeconds();
+                //neu gio <10 ta them so '0' phia truoc
+                if(gio < 10)
+                {
+                    gio = "0" + gio;
+    
+                }
+                if(phut < 10)
+                {
+                    phut = "0" + phut;
+                }
+                if(giay < 10)
+                {
+                    giay = "0" + giay;
+    
+                }
+                document.getElementById("dongho").innerHTML = gio +":"+phut+":"+giay;
+                //cu 1 giay (1000 miligiay ) goi lai ham showClock()
+                setInterval("showClock()", 1000);
+            }
+        </script>
+    </head>
+    <body onload="showClock();">
+        <div class="container">
+           
+            <header>
+                
+                <div class="login">
+                <a href="login.html" target="abc">Đăng nhập</a> 
+                <a href="register.html" target="abc">Đăng kí</a> 
+                <div class="top-right">
+                    <input type="text" name="" class="search"placeholder="Tìm kiếm..."  />
+                    <a href="#" class="searchbtn">                     
+                    </a>
+                    <!-- <img src="images/kinhluc.jpg" width="38px" height="35px">
+                    <img src="images/nguoi2.jpg"  width="38px" height="35px">
+                    <img src="images/giohang.jpg" width="38px" height="35px"> -->
+                </div>                
+                </div>           
+                <div id="dongho">                  
+                </div>
+               
+            </header>                     
+            <nav >
+                <ul>
+                <li><a href="home.html" target="abc">trang chủ</a></li>
+                <li><a href="about.html" target="abc">giới thiệu</a></li>            
+                <li><a href="feedback.html" target="abc">liên hệ</a> </li>   
+                <li><a href="danhmucsanpham.html" target="abc">danh mục sản phẩm</a></li>
+                
+                <li><a href="news.html" target="abc">tin tức</a></li>
+                <li><a href="hobby.html" target="abc">sở thích</a></li>
+                <li><a href="media.html" target="abc">media</a></li>
+                <li><a href="phieumua.html" target="abc">phiếu mua</a></li>
+                <li><a href="giohang.html" target="abc">giỏ hàng</a></li>
+                <li>
+                    <a href="#">sản phẩm</a>
+                    <ul>                        
+                        <li><a href="thoitrangnam.html" target="abc">thời trang nam</a></li>
+                        <li><a href="thoitrangnu.html" target="abc">thời trang nữ</a></li>
+                        <li><a href="dodungnhabep.html" target="abc">Đồ dùng nhà bếp</a></li>                        
+                        <li><a href="chamsocnhacua.html" target="abc">chăm sóc nhà cửa</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">gallery</a>
+                    <ul>                        
+                        <li><a href="photo.html" target="abc">photo</a></li>
+                        <li><a href="other.html" target="abc">other</a></li>           
+                        
+                    </ul>
+                </li>
+                <li><a href="maytinh.html" target="abc">máy tính</a> </li>
+                                
+                </ul>
+               </nav>                                   
+            <article>
+                <iframe src="home.html" name="abc"></iframe>                
+            </article>
+            <aside>
+                <ul type="none">
+                    <h3>SẢN PHẨM TIỆN ÍCH </h3>
+                    <li><a href="thegame.html" target="abc">Thẻ Game</a></li>                    
+                    <li><a href="kemdanhrang.html"target="abc">Kem đánh răng</a></li>
+                    <li><a href="khautrang.html"target="abc">Khẩu trang chống khuẩn</a></li>
+                    <li><a href="maymocthietbi.html" target="abc">Máy móc, thiết bị</a></li>
+                    <li><a href="dochoi.html" target="abc">Đồ chơi</a></li>
+                </ul>
+                
+            </aside>
+            <footer><p>FPT Polytechnic &copy; All right reserved<br>
+                        Email: taidtps18692@fpt.edu.vn<br>
+                        Phone:0765543280<br>
+                        Đỗ Tấn Tài</p>
+
+            </footer>
+            <script src="https://uhchat.net/code.php?f=64fd45"></script>
+        </div>
+    </body>
+</html>

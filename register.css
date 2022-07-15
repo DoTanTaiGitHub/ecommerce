@@ -1,0 +1,23 @@
+form{
+    width: 400px;
+    height: 400px;
+    
+    margin: auto;
+    border-radius: 20px;
+    background-color: lemonchiffon;
+    box-shadow: 10px 10px lawngreen;
+}
+div{
+    padding-left: 30px;
+    font-size: large;
+    color: red;
+}
+h1{
+   text-align: center;
+   margin-top: 0;
+   width: 400px;
+   color: blue;
+   background-color: aqua;
+   border-top-left-radius: 20px ;
+   border-top-right-radius: 20px ;
+}

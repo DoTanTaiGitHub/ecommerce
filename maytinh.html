@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>may tinh</title>
+    <link rel="stylesheet" href="maytinh.css">
+
+
+    <Script>
+       //1. khai báo
+        var so1 = null;
+        var so2 = null;
+        var pheptinh = null;
+        var kq = null;
+        //2. sinh viên thứ 1 làm
+          function ganso(x){
+            if(so1 == null){
+                so1 =x;
+            }
+            else {
+                so2 =x;
+            }
+          }
+        //3. sinh viên thứ 2 làm
+          function ganpheptinh(x){
+            pheptinh = x;
+          }
+        //3. sinh viên thứ 3 làm
+          function thuc_hien(){
+            switch(pheptinh)
+            {
+                case "+":
+                    document.getElementById("so1").innerHTML = so1;
+                    document.getElementById("so2").innerHTML = so2;
+                    document.getElementById("pt").innerHTML = pheptinh;
+                    document.getElementById("kq").innerHTML = " = "+(so1 + so2);
+                break;
+                case "-":
+                    document.getElementById("so1").innerHTML = so1;
+                    document.getElementById("so2").innerHTML = so2;
+                    document.getElementById("pt").innerHTML = pheptinh;
+                    document.getElementById("kq").innerHTML = " = "+(so1 - so2);
+                break;
+                case "x":
+                    document.getElementById("so1").innerHTML = so1;
+                    document.getElementById("so2").innerHTML = so2;
+                    document.getElementById("pt").innerHTML = pheptinh;
+                    document.getElementById("kq").innerHTML = " = "+(so1 * so2);
+                break;
+                case ":":
+                    document.getElementById("so1").innerHTML = so1;
+                    document.getElementById("so2").innerHTML = so2;
+                    document.getElementById("pt").innerHTML = pheptinh;
+                    document.getElementById("kq").innerHTML = " = "+(so1/so2);
+                break;
+            }
+          }
+        //4. sinh viên thứ 4 làm
+          function lam_lai(){
+            so1 = null;
+            so2 = null;
+            pheptinh = null;
+            kq = null;
+          }      
+        
+    </Script>
+</head>
+<body>
+    <center>
+        
+        <table class="container">   
+            <caption>MÁY TÍNH JAVASCRIPT<br>
+            <span>Tác giả: Đỗ Tấn Tài </span></caption>     
+              <tr>
+                <td><button onclick="ganso(7)">7</button></td>
+                <td><button onclick="ganso(8)">8</button></td>
+                <td><button onclick="ganso(9)">9</button></td>
+                <td><button onclick="ganpheptinh('+')">+</button></td>
+              </tr>
+              <tr>
+                <td><button onclick="ganso(4)">4</button></td>
+                <td><button onclick="ganso(5)">5</button></td>
+                <td><button onclick="ganso(6)">6</button></td>
+                <td><button onclick="ganpheptinh('-')">-</button></td>
+              </tr>
+              <tr>
+                <td><button onclick="ganso(1)">1</button></td>
+                <td><button onclick="ganso(2)">2</button></td>
+                <td><button onclick="ganso(3)">3</button></td>
+                <td><button onclick="ganpheptinh('x')">x</button></td>
+              </tr>
+              <tr>
+                <td><button>0</button></td>
+                <td><button onclick="lam_lai()" >C</button></td>
+                <td><button onclick="thuc_hien()">=</button></td>
+                <td><button onclick="ganpheptinh(':')">:</button></td>
+              </tr>
+              <tr>
+                <td  id="so1"> </td>
+                <td id="pt"></td>
+                <td id="so2"></td>
+                <td  id="kq"> </td>
+              </tr>
+            </table>
+    </center>
+</body>
+</html>

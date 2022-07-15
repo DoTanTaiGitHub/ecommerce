@@ -1,0 +1,17 @@
+#ketqua { 
+    width: 300px; font-size: 1.5em; letter-spacing: 3px;
+     
+}
+#ketqua p { margin:8px 0 8px 30px; text-transform: uppercase; }
+.abc { background-color: antiquewhite; color: hotpink; 
+    border: solid  teal 1px;
+     padding: 20px; }
+.xyz { background-color: maroon; color:mistyrose; 
+    border: solid  teal 1px;
+     padding: 20px;  }
+#txt { background-color: powderblue; font-size: 1.2em; letter-spacing: 2px;}
+#btn1 { width:120px; height: 35px; border:none; background-color: salmon; margin-top:5px ;}
+body{
+    
+    background-color: lightgreen;
+}

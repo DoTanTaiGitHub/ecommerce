@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>giohang</title>
+    <link rel="stylesheet" href="giohang.css">
+<script>
+
+    function validate()
+    {
+        var ProductName = document.forms[0].txtProductName.value;
+        var Price = document.forms[0].txtPrice.value;
+        var Quantity = document.forms[0].txtQuantity.value;
+
+
+        if (ProductName == "")
+        {
+            alert("tên sản phẩm không được để trống!");
+            return;
+        }
+        if (isNaN(Price) == true)
+        {
+            alert("Giá phải là số !");
+            return;
+        }
+        else 
+        {
+            Price = Number(Price);
+            if ((Price < 0 )||(Price > 100 ))
+            {
+                alert("Giá phải trong khoảng từ 0 đến 100 !");
+                return;
+            }
+        }
+        if(isNaN(Quantity) == true)
+        {
+            alert("Số lượng phải là số : ")
+            return;
+        }
+        else{
+            Quantity = Number(Quantity);
+            if ((Quantity <=0))
+            {
+                alert("Số lượng phải lớn hơn 0 :");
+                return;
+            }
+        }
+        alert("Dữ liệu hợp lệ. ");
+
+    }
+</script>
+
+</head>
+<body>
+    <form action="#" method="post" onsubmit="return validate();">
+        <h1>Giỏ hàng </h1>
+        <br>
+        <div><label>Nhập tên sản phẩm :</label> 
+        <input type="text" name="txtProductName" />
+        </div>
+        <div>
+        <br><label>Nhập giá :</label> 
+        <input type="text" name="txtPrice" />
+        </div>
+        <div>
+        <br><label>Nhập số lượng :</label> 
+        <input type="text" name="txtQuantity" />
+        </div>
+        <br> 
+        <div>
+        <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

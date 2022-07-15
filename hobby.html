@@ -1,0 +1,63 @@
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="hobby.css">
+    </head>
+    <body>
+   
+
+        <h2>BUỒN BẠN THÍCH LÀM GÌ:</h2>
+        <div id="ketqua"></div>
+    
+        <!-- DANH SÁCH CHECKBOX SỞ THÍCH nhớ cùng tên là name="thich" -->
+        <form>
+        <input type="checkbox" name="thich" value="caphe">caphe<br>
+        <input type="checkbox" name="thich" value="nghenhac">nghe nhạc<br>
+        <input type="checkbox" name="thich" value="annhau">ăn nhậu<br>
+        <input type="checkbox" name="thich" value="xemphim">xem phim<br>
+        <input type="checkbox" name="thich" value="bongda">bóng đá<br>
+        <button id="btn1" type="button" onclick="check()">Chọn</button>
+        </form>
+        
+        <hr>
+    </body>
+</html>
+<script>
+//3. khai báo hàm check
+function check(){
+    //4. quét hết sở thích đưa  vào mảng arr
+    arr = document.getElementsByName("thich"); 
+    //5. lấy ra node/ Element có id là "ketqua"
+    var kq = document.getElementById("ketqua");
+    //6. khai báo biến đếm sở thích 
+    var dem=0;
+    kq.innerHTML=""; //7. khởi gán text nút kq là rỗng
+    // duyệt qua mảng arr
+    for (i=0 ; i<arr.length ; i++ ){
+        if (arr[i].checked) {
+            //8. lấy ra sở thích người dùng check vào
+            var v =  arr[i].value;
+            //9. tạo Node và gán giá trị sở thích người dùng chọn vào
+            var chu = document.createTextNode(v);
+            //10. tạo thẻ p
+            var tagp = document.createElement("p");
+            //11. gắn Node chu vào thẻ p
+            tagp.appendChild(chu);
+            kq.appendChild(tagp);
+            //12. tăng biến đếm sở thích lên 1
+            dem++;
+        }//if
+    }//for
+    if (dem>0){
+        //13. có chọn sở thích thì tạo class .abc để css phía trên cho đẹp
+        kq.className="abc";
+    }
+    else {
+        //14. không chọn sở thích nào thì thông báo
+        kq.innerHTML="Chưa chọn mục nào";
+        kq.className="xyz"; //15. không có sở thích thì css màu khác cho đẹp
+    }
+}
+
+</script>
